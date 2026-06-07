@@ -1,0 +1,11 @@
+node_modules/
+demo1/node_modules/
+demo2/node_modules/
+
+demo1/dist/
+demo2/dist/
+public/
+
+.vercel/
+.env
+.env.local
