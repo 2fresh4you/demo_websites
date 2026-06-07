@@ -19,6 +19,8 @@ import {
   Wrench,
 } from 'lucide-react'
 
+const publicAsset = (path) => `${import.meta.env.BASE_URL}${path}`
+
 const rollingWords = ['Architecture', 'Interiors', 'Light Systems', 'Minimal Living']
 
 const stats = [
@@ -73,7 +75,7 @@ const projects = [
     place: 'Berlin',
     type: 'Residential shell',
     year: '2026',
-    image: '/projects/mono-house.png',
+    image: publicAsset('projects/mono-house.png'),
     alt: 'Monochrome concrete residence interior with a long structural spine wall.',
     metric: 'MASS 78 / LIGHT 41',
     text: 'A compact urban home organized around one uninterrupted concrete spine and controlled daylight.',
@@ -83,7 +85,7 @@ const projects = [
     place: 'Copenhagen',
     type: 'Interior system',
     year: '2025',
-    image: '/projects/grid-apartment.png',
+    image: publicAsset('projects/grid-apartment.png'),
     alt: 'Minimal apartment with modular cabinetry, black details and precise panel grid.',
     metric: 'GRID 600 / STORAGE 91',
     text: 'A modular apartment plan where storage, thresholds and lighting follow a strict 600mm matrix.',
@@ -93,7 +95,7 @@ const projects = [
     place: 'Zurich',
     type: 'Workplace concept',
     year: '2026',
-    image: '/projects/atlas-office.png',
+    image: publicAsset('projects/atlas-office.png'),
     alt: 'Dark monochrome office interior with ceiling rails, modular desks and acoustic zones.',
     metric: 'ACOUSTIC 64 / FLOW 88',
     text: 'A quiet workplace with calibrated acoustic zones, exposed circulation and precise team rituals.',
@@ -103,7 +105,7 @@ const projects = [
     place: 'Amsterdam',
     type: 'Adaptive reuse',
     year: '2024',
-    image: '/projects/low-light-loft.png',
+    image: publicAsset('projects/low-light-loft.png'),
     alt: 'Low-light loft interior with dark material planes, large windows and warm task lighting.',
     metric: 'LUX 180 / GLARE 04',
     text: 'A low-glare loft study built around dark material planes, narrow reveals and warm task light.',
@@ -113,31 +115,31 @@ const projects = [
 const galleryItems = [
   {
     title: 'Material Index',
-    image: '/gallery/material-study.png',
+    image: publicAsset('gallery/material-study.png'),
     metric: 'SURFACE / 04',
     accent: '#5b9bf6',
   },
   {
     title: 'Light Threshold',
-    image: '/gallery/light-study.png',
+    image: publicAsset('gallery/light-study.png'),
     metric: 'LUX / 180',
     accent: '#4a9e5c',
   },
   {
     title: 'Scale Model',
-    image: '/gallery/model-study.png',
+    image: publicAsset('gallery/model-study.png'),
     metric: 'GRID / 1:50',
     accent: '#8b7cf6',
   },
   {
     title: 'Mono House',
-    image: '/projects/mono-house.png',
+    image: publicAsset('projects/mono-house.png'),
     metric: 'MASS / 78',
     accent: '#d71921',
   },
   {
     title: 'Grid Apartment',
-    image: '/projects/grid-apartment.png',
+    image: publicAsset('projects/grid-apartment.png'),
     metric: 'STORAGE / 91',
     accent: '#d4a843',
   },
@@ -515,7 +517,7 @@ function BrandIcon({ type }) {
 }
 
 function GodRaysOverlay() {
-  return <img className="god-rays-overlay" src="/god-rays-new.png" alt="" aria-hidden="true" />
+  return <img className="god-rays-overlay" src={publicAsset('god-rays-new.png')} alt="" aria-hidden="true" />
 }
 
 function SectionMarker({ eyebrow, title }) {
@@ -531,7 +533,7 @@ function Header() {
   return (
     <header className="site-header">
       <a className="brand" href="#top" aria-label="VOID STUDIO home">
-        <img className="brand-logo" src="/logo.png" alt="" aria-hidden="true" />
+        <img className="brand-logo" src={publicAsset('logo.png')} alt="" aria-hidden="true" />
         <span>VOID STUDIO</span>
       </a>
       <nav aria-label="Primary navigation">
@@ -580,7 +582,7 @@ function RollingText() {
 function HeroImage() {
   return (
     <figure className="hero-visual" data-reveal>
-      <img src="/hero/void-spatial-hero.png" alt="Dark VOID STUDIO spatial installation with concrete, glass, steel and god-ray lighting." />
+      <img src={publicAsset('hero/void-spatial-hero.png')} alt="Dark VOID STUDIO spatial installation with concrete, glass, steel and god-ray lighting." />
       <figcaption>
         <span>LIGHT STUDY / GENERATED</span>
         <span>COORD 52.5200 N</span>
@@ -895,7 +897,7 @@ function Philosophy() {
 function CircularText() {
   return (
     <div className="footer-orbit" aria-hidden="true">
-      <img src="/logo.png" alt="" />
+      <img src={publicAsset('logo.png')} alt="" />
       <svg viewBox="0 0 220 220">
         <defs>
           <path
