@@ -1933,6 +1933,10 @@ svg {
     width: 100%;
   }
 
+  .hero-blob-button__inner {
+    width: 100%;
+  }
+
   .section-pad {
     padding-top: 72px;
     padding-bottom: 72px;
