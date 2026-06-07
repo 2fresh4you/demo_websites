@@ -18,8 +18,16 @@ import {
   Sofa,
   Wrench,
 } from 'lucide-react'
-
-const publicAsset = (path) => `${import.meta.env.BASE_URL}${path}`
+import logoImage from './assets/site/logo.png'
+import godRaysImage from './assets/site/god-rays-new.png'
+import heroImage from './assets/site/hero/void-spatial-hero.png'
+import atlasOfficeImage from './assets/site/projects/atlas-office.png'
+import gridApartmentImage from './assets/site/projects/grid-apartment.png'
+import lowLightLoftImage from './assets/site/projects/low-light-loft.png'
+import monoHouseImage from './assets/site/projects/mono-house.png'
+import lightStudyImage from './assets/site/gallery/light-study.png'
+import materialStudyImage from './assets/site/gallery/material-study.png'
+import modelStudyImage from './assets/site/gallery/model-study.png'
 
 const rollingWords = ['Architecture', 'Interiors', 'Light Systems', 'Minimal Living']
 
@@ -75,7 +83,7 @@ const projects = [
     place: 'Berlin',
     type: 'Residential shell',
     year: '2026',
-    image: publicAsset('projects/mono-house.png'),
+    image: monoHouseImage,
     alt: 'Monochrome concrete residence interior with a long structural spine wall.',
     metric: 'MASS 78 / LIGHT 41',
     text: 'A compact urban home organized around one uninterrupted concrete spine and controlled daylight.',
@@ -85,7 +93,7 @@ const projects = [
     place: 'Copenhagen',
     type: 'Interior system',
     year: '2025',
-    image: publicAsset('projects/grid-apartment.png'),
+    image: gridApartmentImage,
     alt: 'Minimal apartment with modular cabinetry, black details and precise panel grid.',
     metric: 'GRID 600 / STORAGE 91',
     text: 'A modular apartment plan where storage, thresholds and lighting follow a strict 600mm matrix.',
@@ -95,7 +103,7 @@ const projects = [
     place: 'Zurich',
     type: 'Workplace concept',
     year: '2026',
-    image: publicAsset('projects/atlas-office.png'),
+    image: atlasOfficeImage,
     alt: 'Dark monochrome office interior with ceiling rails, modular desks and acoustic zones.',
     metric: 'ACOUSTIC 64 / FLOW 88',
     text: 'A quiet workplace with calibrated acoustic zones, exposed circulation and precise team rituals.',
@@ -105,7 +113,7 @@ const projects = [
     place: 'Amsterdam',
     type: 'Adaptive reuse',
     year: '2024',
-    image: publicAsset('projects/low-light-loft.png'),
+    image: lowLightLoftImage,
     alt: 'Low-light loft interior with dark material planes, large windows and warm task lighting.',
     metric: 'LUX 180 / GLARE 04',
     text: 'A low-glare loft study built around dark material planes, narrow reveals and warm task light.',
@@ -115,31 +123,31 @@ const projects = [
 const galleryItems = [
   {
     title: 'Material Index',
-    image: publicAsset('gallery/material-study.png'),
+    image: materialStudyImage,
     metric: 'SURFACE / 04',
     accent: '#5b9bf6',
   },
   {
     title: 'Light Threshold',
-    image: publicAsset('gallery/light-study.png'),
+    image: lightStudyImage,
     metric: 'LUX / 180',
     accent: '#4a9e5c',
   },
   {
     title: 'Scale Model',
-    image: publicAsset('gallery/model-study.png'),
+    image: modelStudyImage,
     metric: 'GRID / 1:50',
     accent: '#8b7cf6',
   },
   {
     title: 'Mono House',
-    image: publicAsset('projects/mono-house.png'),
+    image: monoHouseImage,
     metric: 'MASS / 78',
     accent: '#d71921',
   },
   {
     title: 'Grid Apartment',
-    image: publicAsset('projects/grid-apartment.png'),
+    image: gridApartmentImage,
     metric: 'STORAGE / 91',
     accent: '#d4a843',
   },
@@ -517,7 +525,7 @@ function BrandIcon({ type }) {
 }
 
 function GodRaysOverlay() {
-  return <img className="god-rays-overlay" src={publicAsset('god-rays-new.png')} alt="" aria-hidden="true" />
+  return <img className="god-rays-overlay" src={godRaysImage} alt="" aria-hidden="true" />
 }
 
 function SectionMarker({ eyebrow, title }) {
@@ -533,7 +541,7 @@ function Header() {
   return (
     <header className="site-header">
       <a className="brand" href="#top" aria-label="VOID STUDIO home">
-        <img className="brand-logo" src={publicAsset('logo.png')} alt="" aria-hidden="true" />
+        <img className="brand-logo" src={logoImage} alt="" aria-hidden="true" />
         <span>VOID STUDIO</span>
       </a>
       <nav aria-label="Primary navigation">
@@ -582,7 +590,7 @@ function RollingText() {
 function HeroImage() {
   return (
     <figure className="hero-visual" data-reveal>
-      <img src={publicAsset('hero/void-spatial-hero.png')} alt="Dark VOID STUDIO spatial installation with concrete, glass, steel and god-ray lighting." />
+      <img src={heroImage} alt="Dark VOID STUDIO spatial installation with concrete, glass, steel and god-ray lighting." />
       <figcaption>
         <span>LIGHT STUDY / GENERATED</span>
         <span>COORD 52.5200 N</span>
@@ -897,7 +905,7 @@ function Philosophy() {
 function CircularText() {
   return (
     <div className="footer-orbit" aria-hidden="true">
-      <img src={publicAsset('logo.png')} alt="" />
+      <img src={logoImage} alt="" />
       <svg viewBox="0 0 220 220">
         <defs>
           <path
